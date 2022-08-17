@@ -1,0 +1,28 @@
+CREATE TABLE Tuscany (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, price INTEGER, color TEXT);
+
+INSERT INTO Tuscany VALUES (1, "Woodland Pine", 4, 10, "Green");
+INSERT INTO Tuscany VALUES (2, "Peach Sunrise", 5, 10, "Peach");
+INSERT INTO Tuscany VALUES (3, "Baked Apple Pie", 10, 4, "Red");
+INSERT INTO Tuscany VALUES (4, "Sweet Peach", 12, 2, "Peach");
+INSERT INTO Tuscany VALUES (5, "Hype Girl", 5, 10, "Pink");
+INSERT INTO Tuscany VALUES (6, "Bubble", 5, 10, "White");
+INSERT INTO Tuscany VALUES (7, "Cool Dude", 6, 4, "Blue");
+INSERT INTO Tuscany VALUES (8, "Sunshine Day", 5, 8, "Yellow");
+INSERT INTO Tuscany VALUES (9, "Bro", 5, 7, "Brown");
+INSERT INTO Tuscany VALUES (10, "Summer", 8, 7, "White");
+INSERT INTO Tuscany VALUES (11, "Autumn", 8, 11, "Orange");
+INSERT INTO Tuscany VALUES (12, "Winter", 5, 10, "White");
+INSERT INTO Tuscany VALUES (13, "Spring", 6, 12, "Pink");
+INSERT INTO Tuscany VALUES (14, "Sweater Weather", 25, 15, "Grey");
+INSERT INTO Tuscany VALUES (15, "Drama", 3, 6, "Pale Pink");
+
+
+
+
+
+
+SELECT * FROM Tuscany ORDER BY price
+
+
+
+--display the database ordered by price.
