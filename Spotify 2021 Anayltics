@@ -77,3 +77,60 @@ FROM BIT_DB.Spotifydata
 ORDER BY duration_ms ASC
 LIMIT 1
 
+#What are the 10 least popular songs?
+
+SELECT 
+track_name,
+popularity
+FROM BIT_DB.Spotifydata
+ORDER BY popularity ASC
+LIMIT 10
+
+#Which song is the least popular and who is the artist?
+
+SELECT 
+artist_name,
+track_name,
+MIN(popularity)
+FROM BIT_DB.Spotifydata
+ORDER BY popularity
+
+
+#Which song and artist has the highest energy level and the lowest popularity?
+
+SELECT
+artist_name,
+track_name,
+MAX(energy),
+MIN(popularity)
+FROM BIT_DB.Spotifydata
+ORDER BY energy
+
+#Which song is the loudest and most likely to be a live recording?
+
+SELECT
+track_name,
+MAX(loudness),
+MAX(liveness)
+FROM BIT_DB.Spotifydata
+ORDER BY loudness DESC
+LIMIT 1
+
+#Which song is the hardest to dance to?
+
+SELECT
+artist_name,
+track_name,
+MIN(danceability)
+FROM BIT_DB.Spotifydata
+ORDER BY danceability
+
+#Which artist(s) appears in the Top 50 list the most?
+
+SELECT
+Artist_name,
+COUNT(artist_name)
+FROM BIT_DB.Spotifydata
+GROUP BY artist_name 
+ORDER BY COUNT(artist_name) DESC
+LIMIT 2
