@@ -48,3 +48,32 @@ popularity
 FROM BIT_DB.Spotifydata
 ORDER BY popularity DESC
 LIMIT 10
+
+#What is the average danceability by artist and track?
+
+SELECT
+artist_name,
+track_name,
+AVG(danceability)
+FROM BIT_DB.Spotifydata
+GROUP BY artist_name, track_name
+
+#What artist released the longest song?
+
+SELECT
+artist_name,
+duration_ms
+FROM BIT_DB.Spotifydata
+ORDER BY duration_ms DESC
+LIMIT 1
+
+#What is the shortest song released and who is the artist?
+
+SELECT
+artist_name,
+track_name,
+duration_ms
+FROM BIT_DB.Spotifydata 
+ORDER BY duration_ms ASC
+LIMIT 1
+
