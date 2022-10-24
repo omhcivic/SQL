@@ -1,3 +1,5 @@
+#Create a table for a business
+
 CREATE TABLE Tuscany (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, price INTEGER, color TEXT);
 
 INSERT INTO Tuscany VALUES (1, "Woodland Pine", 4, 10, "Green");
@@ -19,10 +21,10 @@ INSERT INTO Tuscany VALUES (15, "Drama", 3, 6, "Pale Pink");
 
 
 
-
+#Display the database ordered by price.
 
 SELECT * FROM Tuscany ORDER BY price
 
 
 
---display the database ordered by price.
+
