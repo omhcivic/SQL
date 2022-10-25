@@ -1,0 +1,11 @@
+# Show customers (full names, customer ID, and country) who are not in the US. Organize in descending order by country.
+
+SELECT 
+FIrstname,
+Lastname,
+CustomerID,
+Country
+FROM customers
+WHERE Country <> 'USA'
+ORDER BY Country DESC
+
