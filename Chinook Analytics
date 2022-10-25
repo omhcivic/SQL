@@ -33,3 +33,25 @@ SELECT COUNT(InvoiceID)
 FROM invoices
 WHERE BillingCountry <> 'USA'
 
+#Which customer invoices are from Brazil? (Provide customer's full name, invoice ID, date of the invoice, and billing Country)
+
+SELECT
+c.Firstname,
+c.Lastname,
+i.InvoiceId,
+i.InvoiceDate,
+i.BillingCountry
+FROM
+customers c
+JOIN
+invoices i
+ON c.CustomerId=i.CustomerId
+WHERE BillingCountry = 'Brazil'
+
+#What are the total sales for 2009?
+
+SELECT
+SUM(TOtal)
+FROM invoices
+WHERE InvoiceDate LIKE '%2009%'
+
