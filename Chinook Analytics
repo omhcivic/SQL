@@ -26,3 +26,10 @@ Lastname,
 Firstname
 FROM employees
 WHERE Title='Sales Support Agent'
+
+#How many invoices were billed to countries other than USA?
+
+SELECT COUNT(InvoiceID)
+FROM invoices
+WHERE BillingCountry <> 'USA'
+
