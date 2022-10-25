@@ -55,3 +55,13 @@ SUM(TOtal)
 FROM invoices
 WHERE InvoiceDate LIKE '%2009%'
 
+#How many total employees work for Chinook?
+
+SELECT COUNT(EmployeeId)
+FROM employees
+
+#How many employees are a manager?
+
+SELECT COUNT(EmployeeId)
+FROM employees
+WHERE Title LIKE '%manager%'
