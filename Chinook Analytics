@@ -1,4 +1,4 @@
-#Which customers (full names, customer ID, and country) are not in the US? Organize in descending order by country.
+#1. Which customers (full names, customer ID, and country) are not in the US? Organize in descending order by country.
 
 SELECT 
 FIrstname,
@@ -9,7 +9,7 @@ FROM customers
 WHERE Country <> 'USA'
 ORDER BY Country DESC
 
-#Which Customers are from Brazil?
+#2. Which Customers are from Brazil?
 
 SELECT 
 Firstname, 
@@ -19,7 +19,7 @@ Country
 FROM customers
 WHERE Country = 'Brazil'
 
-#Which employees are Sales Agents?
+#3. Which employees are Sales Agents?
 
 SELECT 
 Lastname,
@@ -27,13 +27,13 @@ Firstname
 FROM employees
 WHERE Title='Sales Support Agent'
 
-#How many invoices were billed to countries other than USA?
+#4. How many invoices were billed to countries other than USA?
 
 SELECT COUNT(InvoiceID)
 FROM invoices
 WHERE BillingCountry <> 'USA'
 
-#Which customer invoices are from Brazil? (Provide customer's full name, invoice ID, date of the invoice, and billing Country)
+#5. Which customer invoices are from Brazil? (Provide customer's full name, invoice ID, date of the invoice, and billing Country)
 
 SELECT
 c.Firstname,
@@ -48,19 +48,19 @@ invoices i
 ON c.CustomerId=i.CustomerId
 WHERE BillingCountry = 'Brazil'
 
-#What are the total sales for 2009?
+#6. What are the total sales for 2009?
 
 SELECT
 SUM(TOtal)
 FROM invoices
 WHERE InvoiceDate LIKE '%2009%'
 
-#How many total employees work for Chinook?
+#7. How many total employees work for Chinook?
 
 SELECT COUNT(EmployeeId)
 FROM employees
 
-#How many employees are a manager?
+#8. How many employees are a manager?
 
 SELECT COUNT(EmployeeId)
 FROM employees
